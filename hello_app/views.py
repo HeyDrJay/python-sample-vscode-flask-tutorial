@@ -14,6 +14,10 @@ def about():
 def contact():
     return render_template("contact.html")
 
+@app.route("/learn/")
+def learn():
+    return render_template("learn.html")
+
 @app.route("/hello/")
 @app.route("/hello/<name>")
 def hello_there(name = None):
@@ -27,7 +31,7 @@ def hello_there(name = None):
 def get_data():
     return app.send_static_file("data.json")
 
-# setting up a new template
-@app.route("/learn/<name>")
+
+@app.route("/learn/")
 def learn():
     return render_template("learn.html")
