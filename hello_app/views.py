@@ -27,7 +27,7 @@ def hello_there(name = None):
 def get_data():
     return app.send_static_file("data.json")
 
-# setting up a new template
-@app.route("/learn/<name>")
+
+@app.route("/learn/")
 def learn():
     return render_template("learn.html")
