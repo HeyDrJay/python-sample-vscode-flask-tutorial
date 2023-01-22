@@ -32,7 +32,7 @@
 
     h1 {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 400;
     color: rgb(41, 138, 235);
     }
 
@@ -43,14 +43,14 @@
 	margin-bottom: 0; 
     }
 
-    ul { 
+    li { 
     list-style-type: lower-alpha;
     font-size: 1em;
     line-height: 1.5;	
 	margin-top: 0; 		
 	margin-bottom: 0; 
     }
-    }      
+             }      
 .footer{
     font-size: 1em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
