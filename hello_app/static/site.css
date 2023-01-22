@@ -44,9 +44,11 @@ p {
 	margin-bottom: 0; 
 }
 
-li { 
+ul { 
+    list-style-type: lower-alpha;
     font-size: 1em;
     line-height: 1.5;	
 	margin-top: 0; 		
 	margin-bottom: 0; 
-}
+    }
+
