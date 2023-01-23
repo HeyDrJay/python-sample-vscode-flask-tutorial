@@ -17,8 +17,7 @@ def contact():
 @app.route("/learn/")
 @app.route("/learn/<topic>")
 def learn(topic = None):
-    topic = int(topic) if topic else 0
-    return render_template("learn.html", topic=topic)
+    return render_template("learn.html", topic=topic+1)
 
 @app.route("/hello/")
 @app.route("/hello/<name>")
