@@ -16,4 +16,13 @@ Typical meta information of you pictures could be:</p>
     </li>etc</li>
 </ul>
 
+{%if topic %}
+<span class="message">You want to learn {{ topic }}, right?</span>
+topic = topic + 1
+print(topic)
+{% else %}
+<span class="message">What do you want to learn? Provide it after /learn/ in the URL.</span>
+{% endif %}
+
+
 {% endblock %}

@@ -1,5 +1,5 @@
 .message {
-    font-weight: 600;
+    font-size: 1em;
     color: blue;
 }
 
@@ -24,7 +24,7 @@
     font-variant: small-caps;
     margin-left: 30px;
 }
-
+-->
 .body-content {
     padding: 5px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,7 +32,7 @@
 
     h1 {
     font-size: 2em;
-    font-weight: 400;
+    font-weight: 300;
     color: rgb(41, 138, 235);
     }
 
