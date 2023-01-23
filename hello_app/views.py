@@ -16,6 +16,7 @@ def contact():
 
 @app.route("/learn/")
 @app.route("/learn/<topic>")
+topic = topic +1
 def learn(topic = None):
     return render_template("learn.html", topic=topic)
 
