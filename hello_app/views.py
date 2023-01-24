@@ -1,3 +1,7 @@
+import requests, os, uuid, json
+from dotenv import load_dotenv
+load_dotenv()
+
 from datetime import datetime
 from flask import Flask, render_template
 from . import app
@@ -30,7 +34,6 @@ def hello_there(name = None):
 @app.route("/api/data")
 def get_data():
     return app.send_static_file("data.json")
-
 
 @app.route('/input-translate', methods=['GET'])
 def index():
