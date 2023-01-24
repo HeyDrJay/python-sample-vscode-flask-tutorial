@@ -1,6 +1,5 @@
 from datetime import datetime
 from flask import Flask, render_template
-import requests
 from . import app
 
 @app.route("/")
