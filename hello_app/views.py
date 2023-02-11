@@ -35,6 +35,6 @@ def hello_there(name = None):
 def get_data():
     return app.send_static_file("data.json")
 
-@app.route('/input-translate', methods=['GET'])
+@app.route("/input-translate", methods=['GET'])
 def index():
     return render_template('input-translate.html')
