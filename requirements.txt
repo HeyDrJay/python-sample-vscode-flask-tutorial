@@ -1,2 +1,1 @@
 Flask
-requests == 2.24.0
