@@ -1,7 +1,9 @@
 # Entry point for the application.
 from . import app    # For application discovery by the 'flask' command. 
 from . import views  # For import side-effects of setting up routes. 
-import requests
+import Requests, os, uuid, json
+from dotenv import load_dotenv
+load_dotenv()
 
 # import requests, os, uuid, json
 # from dotenv import load_dotenv
