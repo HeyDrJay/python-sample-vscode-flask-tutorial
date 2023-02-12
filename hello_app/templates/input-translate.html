@@ -6,10 +6,10 @@ Sample translation service with Azure Cognitive Service, Flask and Python
 <div class="body-content">
     <h1>Translation service</h1>
     <p>Enter the text you wish to translate, choose the language, and click translate!</p>
- 
         <form method="POST">
             <div class="form-group">
-                <textarea name="text" cols="20" rows="10" class="form-control"></textarea>
+                <label for="Translation_Input">Text to translate:</label>
+                <textarea id="Translation_Input" name="text" cols="20" rows="10" class="form-control"></textarea>
             </div>
             <div class="form-group">
                 <label for="language">Language:</label>
