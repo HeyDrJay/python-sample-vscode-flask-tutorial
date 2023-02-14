@@ -1,6 +1,7 @@
 # Entry point for the application.
 from . import app    # For application discovery by the 'flask' command. 
 from . import views  # For import side-effects of setting up routes. 
+from flask import render_template
 import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
@@ -50,10 +51,11 @@ def index_post():
 
     # Call render template, passing the translated text,
     # original text, and target language to the template
-    # return render_template(
-    #    "output-translate.html",
-    #    translated_text=translated_text,
-    #    original_text=original_text,
-    #    target_language=target_language
-  #  )
+    # GJ repeated the render template once again but thought it was not necessary
+    return render_template(
+        "output-translate.html",
+        translated_text=translated_text,
+        original_text=original_text,
+        target_language=target_language
+    )
  
