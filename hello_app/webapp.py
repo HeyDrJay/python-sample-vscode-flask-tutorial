@@ -2,7 +2,7 @@
 from . import app    # For application discovery by the 'flask' command. 
 from . import views  # For import side-effects of setting up routes. 
 # did this twice in views and here, thought it was not necessary => check
-from flask import render_template
+# from flask import render_template
 import requests, os, uuid, json
 # from dotenv import load_dotenv
 # load_dotenv()
@@ -16,7 +16,7 @@ import requests, os, uuid, json
 @app.route('/', methods=['POST'])
 def index_post():
     # Read the values from the form
-    # GJ check, error in request instead of requests....#
+    # GJ check, error in request instead of request"s"....#
     original_text = requests.form['text']
     target_language = requests.form['language']
 
