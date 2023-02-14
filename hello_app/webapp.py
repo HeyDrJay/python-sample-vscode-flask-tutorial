@@ -2,8 +2,8 @@
 from . import app    # For application discovery by the 'flask' command. 
 from . import views  # For import side-effects of setting up routes. 
 import requests, os, uuid, json
-# from dotenv import load_dotenv
-# load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 
 # Time-saver: output a URL to the VS Code terminal so you can easily Ctrl+click to open a browser
@@ -14,6 +14,7 @@ import requests, os, uuid, json
 @app.route('/', methods=['POST'])
 def index_post():
     # Read the values from the form
+    # GJ check, error in request instead of requests....#
     original_text = requests.form['text']
     target_language = requests.form['language']
 
@@ -50,7 +51,7 @@ def index_post():
     # Call render template, passing the translated text,
     # original text, and target language to the template
     return render_template(
-        'output-translate.html',
+        "output-translate.html",
         translated_text=translated_text,
         original_text=original_text,
         target_language=target_language
