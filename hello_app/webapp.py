@@ -2,7 +2,7 @@
 from . import app    # For application discovery by the 'flask' command. 
 from . import views  # For import side-effects of setting up routes. 
 # did this twice in views and here, thought it was not necessary => check
-# from flask import render_template
+from flask import render_template
 import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
