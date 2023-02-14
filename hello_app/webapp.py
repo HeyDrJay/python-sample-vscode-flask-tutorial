@@ -2,8 +2,8 @@
 from . import app    # For application discovery by the 'flask' command. 
 from . import views  # For import side-effects of setting up routes. 
 import requests, os, uuid, json
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 
 # Time-saver: output a URL to the VS Code terminal so you can easily Ctrl+click to open a browser
@@ -14,8 +14,8 @@ load_dotenv()
 @app.route('/', methods=['POST'])
 def index_post():
     # Read the values from the form
-    original_text = request.form['text']
-    target_language = request.form['language']
+    original_text = requests.form['text']
+    target_language = requests.form['language']
 
     # Load the values from .env
     key = os.environ['KEY']
