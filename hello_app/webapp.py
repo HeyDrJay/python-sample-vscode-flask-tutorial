@@ -20,7 +20,7 @@ def index():
     return render_template('input-translate.html')
 
 
-@app.route('/', methods=['POST'])
+@app.route('/input-translate', methods=['POST'])
 def index_post():
     # Read the values from the form
     # GJ check, error in request instead of request"s"....#
