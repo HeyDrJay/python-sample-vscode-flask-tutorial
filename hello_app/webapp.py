@@ -9,14 +9,12 @@ from flask import Flask, render_template
 
 
 
-
-
 # Time-saver: output a URL to the VS Code terminal so you can easily Ctrl+click to open a browser
 # print('http://127.0.0.1:5000/hello/VSCode')
 ###################################################
 # starting here, we define the translation service#
 ###################################################
-@app.route('/', methods=['POST'])
+@app.route('/input-translate', methods=['POST'])
 def index_post():
     # Read the values from the form
     # GJ check, error in request instead of request"s"....#
