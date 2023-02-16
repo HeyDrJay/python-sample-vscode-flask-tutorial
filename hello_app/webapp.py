@@ -5,7 +5,8 @@ import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
 # did this twice in views and here, thought it was not necessary => check
-from flask import Flask, render_template
+# maybe i mixed up the different views as i distributed the code in different files
+from flask import Flask, render_template, redirect, url_for, request, session
 
 
 
@@ -14,6 +15,11 @@ from flask import Flask, render_template
 ###################################################
 # starting here, we define the translation service#
 ###################################################
+@app.route("/", methods=['GET'])
+def index():
+    return render_template('input-translate.html')
+
+
 @app.route('/', methods=['POST'])
 def index_post():
     # Read the values from the form

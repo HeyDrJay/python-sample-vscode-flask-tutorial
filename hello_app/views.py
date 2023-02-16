@@ -2,9 +2,9 @@ from datetime import datetime
 from flask import Flask, render_template
 from . import app
 # This route is defined in webapp.py
-#@app.route("/")
-#def home():
-#    return render_template("home.html")
+@app.route("/")
+def home():
+    return render_template("home.html")
 
 @app.route("/about/")
 def about():
@@ -31,6 +31,7 @@ def hello_there(name = None):
 def get_data():
     return app.send_static_file("data.json")
 
-@app.route("/input-translate", methods=['GET'])
-def index():
-    return render_template('input-translate.html')
+# moved this to webapp.py###
+# @app.route("/input-translate", methods=['GET'])
+# def index():
+#    return render_template('input-translate.html')
