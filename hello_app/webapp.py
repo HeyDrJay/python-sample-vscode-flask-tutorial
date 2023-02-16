@@ -1,10 +1,10 @@
 # Entry point for the application.
 from . import app    # For application discovery by the 'flask' command. 
-from . import views  # For import side-effects of setting up routes. 
-# did this twice in views and here, thought it was not necessary => check
+# from . import views  # For import side-effects of setting up routes. 
 import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
+# did this twice in views and here, thought it was not necessary => check
 from flask import Flask, render_template
 
 
@@ -14,7 +14,7 @@ from flask import Flask, render_template
 ###################################################
 # starting here, we define the translation service#
 ###################################################
-@app.route('/input-translate', methods=['POST'])
+@app.route('/', methods=['POST'])
 def index_post():
     # Read the values from the form
     # GJ check, error in request instead of request"s"....#
