@@ -9,7 +9,6 @@ load_dotenv()
 from flask import Flask, render_template, redirect, url_for, request, session
 
 
-
 # Time-saver: output a URL to the VS Code terminal so you can easily Ctrl+click to open a browser
 # print('http://127.0.0.1:5000/hello/VSCode')
 ###################################################
@@ -60,10 +59,10 @@ def index_post():
     # Call render template, passing the translated text,
     # original text, and target language to the template
     # GJ repeated the render template once again but thought it was not necessary
-    # return render_template(
-    #    "output-translate.html",
-    #    translated_text=translated_text,
-    #    original_text=original_text,
-    #   target_language=target_language
-    #)
+    return render_template(
+        "output-translate.html",
+        translated_text=translated_text,
+        original_text=original_text,
+       target_language=target_language
+    )
  
