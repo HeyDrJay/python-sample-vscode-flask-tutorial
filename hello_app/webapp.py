@@ -15,7 +15,7 @@ from flask import Flask, render_template, redirect, url_for, request, session
 ###################################################
 # starting here, we define the translation service#
 ###################################################
-@app.route("/input-translate", methods=['GET'])
+@app.route("/index", methods=['GET'])
 def index():
     return render_template('input-translate.html')
 
