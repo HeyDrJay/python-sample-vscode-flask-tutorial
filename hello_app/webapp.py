@@ -2,7 +2,7 @@
 # did this twice in views and here, thought it was not necessary => check
 # maybe i mixed up the different views as i distributed the code in different files
 from flask import Flask, render_template, redirect, url_for, request, session
-from . import app    # For application discovery by the 'flask' command. 
+# from . import app    # For application discovery by the 'flask' command. 
 from . import views  # For import side-effects of setting up routes. 
 import requests, os, uuid, json
 from dotenv import load_dotenv
