@@ -30,8 +30,3 @@ def hello_there(name = None):
 @app.route("/api/data")
 def get_data():
     return app.send_static_file("data.json")
-
-# moved this to webapp.py###
-# @app.route("/input-translate", methods=['GET'])
-# def index():
-#    return render_template('input-translate.html')
