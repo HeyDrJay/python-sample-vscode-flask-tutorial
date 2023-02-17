@@ -46,7 +46,7 @@ def index_post():
 
     # URI for accessing key vault
     KVUri = "https://{keyVaultName}.vault.azure.net"
-    
+    return 'keys should now be visible' 
 
     # Instantiate the client and retrieve secrets
     credential = DefaultAzureCredential()
