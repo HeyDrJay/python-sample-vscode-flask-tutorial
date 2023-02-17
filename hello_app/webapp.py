@@ -29,7 +29,7 @@ def index_post():
     # Read the values from the form Watch out: module is requests but statement is request.form#
     original_text = request.form['text']
     target_language = request.form['language']
-    return 'request is back' 
+
     ########################################################
     #Load the values from .env
     # key = os.environ['KEY']
