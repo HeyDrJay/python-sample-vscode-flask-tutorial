@@ -22,49 +22,49 @@ def index():
 
 @app.route('/input-translate', methods=['POST'])
 def index_post():
-    return 'welcome %s' % name
+    return 'welcome'
     # Read the values from the form
     # GJ check, error in request instead of request"s"....#
-    original_text = requests.form['text']
-    target_language = requests.form['language']
+    #original_text = requests.form['text']
+    #target_language = requests.form['language']
 
     # Load the values from .env
-    key = os.environ['KEY']
-    endpoint = os.environ['ENDPOINT']
-    location = os.environ['LOCATION']
+    #key = os.environ['KEY']
+    #endpoint = os.environ['ENDPOINT']
+    #location = os.environ['LOCATION']
 
     # Indicate that we want to translate and the API version (3.0) and the target language
-    path = '/translate?api-version=3.0'
+    #path = '/translate?api-version=3.0'
     # Add the target language parameter
-    target_language_parameter = '&to=' + target_language
+    #target_language_parameter = '&to=' + target_language
     # Create the full URL
-    constructed_url = endpoint + path + target_language_parameter
+    #constructed_url = endpoint + path + target_language_parameter
 
     # Set up the header information, which includes our subscription key
-    headers = {
-        'Ocp-Apim-Subscription-Key': key,
-        'Ocp-Apim-Subscription-Region': location,
-        'Content-type': 'application/json',
-        'X-ClientTraceId': str(uuid.uuid4())
-    }
+    #headers = {
+     #   'Ocp-Apim-Subscription-Key': key,
+      #  'Ocp-Apim-Subscription-Region': location,
+       # 'Content-type': 'application/json',
+        #'X-ClientTraceId': str(uuid.uuid4())
+    #}
 
     # Create the body of the request with the text to be translated
-    body = [{ 'text': original_text }]
+    #body = [{ 'text': original_text }]
 
     # Make the call using post
-    translator_request = requests.post(constructed_url, headers=headers, json=body)
+    #translator_request = requests.post(constructed_url, headers=headers, json=body)
     # Retrieve the JSON response
-    translator_response = translator_request.json()
+    #translator_response = translator_request.json()
     # Retrieve the translation
-    translated_text = translator_response[0]['translations'][0]['text']
+    #translated_text = translator_response[0]['translations'][0]['text']
 
     # Call render template, passing the translated text,
     # original text, and target language to the template
     # GJ repeated the render template once again but thought it was not necessary
-    return render_template(
-        "output-translate.html",
-        translated_text=translated_text,
-        original_text=original_text,
-       target_language=target_language
-    )
+    #return render_template(
+     #   "output-translate.html",
+      #  translated_text=translated_text,
+       # original_text=original_text,
+       #target_language=target_language
+    #)
  
