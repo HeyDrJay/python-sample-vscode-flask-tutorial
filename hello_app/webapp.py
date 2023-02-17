@@ -26,7 +26,7 @@ def index_post():
     # Watch out: module is requests but statement is request.form#
     original_text = request.form['text']
     target_language = request.form['language']
-
+    return 'achieved'
     #Load the values from .env
     key = os.environ['KEY']
     endpoint = os.environ['ENDPOINT']
