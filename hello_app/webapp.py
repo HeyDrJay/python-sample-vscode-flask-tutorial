@@ -25,8 +25,8 @@ def index_post():
     return 'welcome'
     # Read the values from the form
     # GJ check, error in request instead of request"s"....#
-    #original_text = requests.form['text']
-    #target_language = requests.form['language']
+    original_text = requests.form['text']
+    target_language = requests.form['language']
 
     # Load the values from .env
     #key = os.environ['KEY']
