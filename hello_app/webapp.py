@@ -26,12 +26,12 @@ def index_post():
     # Watch out: module is requests but statement is request.form#
     original_text = request.form['text']
     target_language = request.form['language']
-    return 'achieved'
+    
     #Load the values from .env
     key = os.environ['KEY']
     endpoint = os.environ['ENDPOINT']
     location = os.environ['LOCATION']
-
+   return 'achieved'
     # Indicate that we want to translate and the API version (3.0) and the target language
     path = '/translate?api-version=3.0'
     # Add the target language parameter
