@@ -9,8 +9,8 @@ import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
 # until here############################################
-from azure.keyvault.secrets import SecretClient
-from azure.identity import DefaultAzureCredential
+# from azure.keyvault.secrets import SecretClient
+# from azure.identity import DefaultAzureCredential
 # from azure.core.credentials import AzureKeyCredential
 
 
@@ -26,8 +26,7 @@ def index():
 
 @app.route('/input-translate', methods=['POST'])
 def index_post():
-    # Read the values from the form
-    # Watch out: module is requests but statement is request.form#
+    # Read the values from the form Watch out: module is requests but statement is request.form#
     original_text = request.form['text']
     target_language = request.form['language']
     return 'request is back' 
