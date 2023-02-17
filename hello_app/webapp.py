@@ -45,7 +45,8 @@ def index_post():
     endpointSecretName = "TranslationpythonEndpoint"
 
     # URI for accessing key vault
-    KVUri = f"https://{keyVaultName}.vault.azure.net"
+    KVUri = "https://{keyVaultName}.vault.azure.net"
+    
 
     # Instantiate the client and retrieve secrets
     credential = DefaultAzureCredential()
