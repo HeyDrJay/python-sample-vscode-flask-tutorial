@@ -43,7 +43,7 @@ def index_post():
     # Set these variables to the names you created for your secrets
     keySecretName = "TranslationpythonKey1"
     endpointSecretName = "TranslationpythonEndpoint"
-
+    return 'keys should now be visible' 
     # URI for accessing key vault
     KVUri = "https://{keyVaultName}.vault.azure.net"
     return 'keys should now be visible' 
