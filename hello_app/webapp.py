@@ -22,6 +22,7 @@ def index():
 
 @app.route('/input-translate', methods=['POST'])
 def index_post():
+    return 'welcome %s' % name
     # Read the values from the form
     # GJ check, error in request instead of request"s"....#
     original_text = requests.form['text']
