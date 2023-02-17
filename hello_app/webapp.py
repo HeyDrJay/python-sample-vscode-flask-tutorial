@@ -22,7 +22,6 @@ def index():
 
 @app.route('/input-translate', methods=['POST'])
 def index_post():
-    return 'welcome'
     # Read the values from the form
     # Watch out: module is requests but statement is request.form#
     original_text = request.form['text']
