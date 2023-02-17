@@ -1,4 +1,5 @@
 Flask==2.0.1    
 requests
 python-dotenv
-ipykernel
+azure-identity
+azure-keyvault-secrets

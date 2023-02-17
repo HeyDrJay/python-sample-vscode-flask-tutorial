@@ -5,8 +5,13 @@ from flask import Flask, render_template, redirect, url_for, request, session
 from . import app    # For application discovery by the 'flask' command. 
 from . import views  # For import side-effects of setting up routes. 
 import requests, os, uuid, json
+# if keyvault is used, uncomment the following lines####
 from dotenv import load_dotenv
 load_dotenv()
+# until here############################################
+from azure.keyvault.secrets import SecretClient
+from azure.identity import DefaultAzureCredential
+from azure.core.credentials import AzureKeyCredential
 
 
 
@@ -26,17 +31,37 @@ def index_post():
     # Watch out: module is requests but statement is request.form#
     original_text = request.form['text']
     target_language = request.form['language']
-    
+    ########################################################
     #Load the values from .env
     # key = os.environ['KEY']
     # endpoint = os.environ['ENDPOINT']
     # location = os.environ['LOCATION']
-    key = '107db5659a0f4b818ba9fc7ec1eeaa08'
-    endpoint = 'https://api.cognitive.microsofttranslator.com'
-    location = 'germanywestcentral'
+    ########################################################
+
+    # Load the values from keyvault
+    keyVaultName = os.environ["PlaygroundKeysGJ"]
+
+    # Set these variables to the names you created for your secrets
+    keySecretName = "TranslationpythonKey1"
+    endpointSecretName = "TranslationpythonEndpoint"
+
+    # URI for accessing key vault
+    KVUri = f"https://{keyVaultName}.vault.azure.net"
+
+    # Instantiate the client and retrieve secrets
+    credential = DefaultAzureCredential()
+    kv_client = SecretClient(vault_url=KVUri, credential=credential)
+
+    print(f"Retrieving your secrets from {keyVaultName}.")
+
+    retrieved_key = kv_client.get_secret(keySecretName).value
+    retrieved_endpoint = kv_client.get_secret(endpointSecretName).value
+
+    print(f"Your secret key value is {retrieved_key}.");
+    print(f"Your secret endpoint value is {retrieved_endpoint}.");
 
 
-
+    return 'keys should now be visible' 
     # Indicate that we want to translate and the API version (3.0) and the target language
     path = '/translate?api-version=3.0'
     # Add the target language parameter
