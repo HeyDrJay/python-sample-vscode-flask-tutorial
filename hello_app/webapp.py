@@ -31,7 +31,7 @@ def index_post():
     key = os.environ['KEY']
     endpoint = os.environ['ENDPOINT']
     location = os.environ['LOCATION']
-    return 'achieved'
+   
     # Indicate that we want to translate and the API version (3.0) and the target language
     path = '/translate?api-version=3.0'
     # Add the target language parameter
