@@ -33,8 +33,8 @@ def index_post():
     # location = os.environ['LOCATION']
     key = '107db5659a0f4b818ba9fc7ec1eeaa08'
     endpoint = 'https://api.cognitive.microsofttranslator.com'
-    location = 'germanywestcentral
-'
+    location = 'germanywestcentral'
+
 
 
     # Indicate that we want to translate and the API version (3.0) and the target language
