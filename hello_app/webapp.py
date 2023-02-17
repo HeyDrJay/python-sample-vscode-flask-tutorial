@@ -9,8 +9,8 @@ import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
 # until here############################################
-# from azure.keyvault.secrets import SecretClient
-# from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
+from azure.identity import DefaultAzureCredential
 # from azure.core.credentials import AzureKeyCredential
 
 
