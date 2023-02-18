@@ -11,7 +11,7 @@ load_dotenv()
 # until here############################################
 from azure.keyvault.secrets import SecretClient
 from azure.identity import DefaultAzureCredential
-# from azure.core.credentials import AzureKeyCredential
+from azure.core.credentials import AzureKeyCredential
 
 
 # Time-saver: output a URL to the VS Code terminal so you can easily Ctrl+click to open a browser
@@ -38,17 +38,14 @@ def index_post():
     ########################################################
 
     # Load the values from keyvault
-    # keyVaultName = os.environ["PlaygroundKeysGJ"]
+    keyVaultName = os.environ["PlaygroundKeysGJ"]
 
     # Set these variables to the names you created for your secrets
     keySecretName = "TranslationpythonKey1"
     endpointSecretName = "TranslationpythonEndpoint"
    
     # URI for accessing key vault, watch out, i did not set an evironment variable for the keyvault name!!!!!
-    # KVUri = "https://{keyVaultName}.vault.azure.net"
-    
-    KVUri = "https://PlaygroundKeysGJ.vault.azure.net"
-    
+    KVUri = "https://{keyVaultName}.vault.azure.net"
 
     # Instantiate the client and retrieve secrets
     credential = DefaultAzureCredential()
