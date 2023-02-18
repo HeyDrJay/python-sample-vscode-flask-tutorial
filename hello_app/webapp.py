@@ -46,6 +46,7 @@ def index_post():
    
     # URI for accessing key vault, watch out, i did not set an evironment variable for the keyvault name!!!!!
     # KVUri = "https://{keyVaultName}.vault.azure.net"
+    
     KVUri = "https://PlaygroundKeysGJ.vault.azure.net"
     
 
