@@ -38,8 +38,7 @@ def index_post():
     ########################################################
 
     # Load the values from keyvault, GJ: all in lower case as this is how they are stored in keyvault 
-    
-    keyVaultName = "playgroundkeysgj"   
+    keyVaultName = os.environ["playgroundkeysgj"]
 
     # Set these variables to the names you created for your secrets
     keySecretName = "TranslationpythonKey1"
