@@ -62,8 +62,7 @@ def index_post():
     print(f"Your secret key value is {retrieved_key}.");
     print(f"Your secret endpoint value is {retrieved_endpoint}.");
 
-
-    return 'geschafft' 
+   
 
     # Indicate that we want to translate and the API version (3.0) and the target language
     path = '/translate?api-version=3.0'
