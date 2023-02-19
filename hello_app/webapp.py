@@ -38,7 +38,8 @@ def index_post():
     ########################################################
 
     # Load the values from keyvault, GJ: all in lower case as this is how they are stored in keyvault 
-    keyVaultName = os.environ["playgroundkeysgj"]
+    # keyVaultName = os.environ["playgroundkeysgj"] no idea why this does not work
+    keyVaultName = "playgroundkeysgj"
 
     # Set these variables to the names you created for your secrets
     keySecretName = "TranslationpythonKey1"
@@ -62,7 +63,8 @@ def index_post():
     print(f"Your secret endpoint value is {retrieved_endpoint}.");
 
 
-    return 'keys should now be visible' 
+    return 'geschafft' 
+
     # Indicate that we want to translate and the API version (3.0) and the target language
     path = '/translate?api-version=3.0'
     # Add the target language parameter
