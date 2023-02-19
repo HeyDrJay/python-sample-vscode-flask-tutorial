@@ -19,12 +19,12 @@ from azure.identity import DefaultAzureCredential
 ###################################################
 # starting here, we define the translation service#
 ###################################################
-@app.route("/input-translate", methods=['GET'])
+@app.route("/input-translate/", methods=['GET'])
 def index():
     return render_template('input-translate.html')
 
 
-@app.route('/input-translate', methods=['POST'])
+@app.route('/input-translate/', methods=['POST'])
 def index_post():
     # Read the values from the form Watch out: module is requests but statement is request.form#
     original_text = request.form['text']
