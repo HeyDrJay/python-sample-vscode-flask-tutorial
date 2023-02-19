@@ -38,7 +38,7 @@ def index_post():
     ########################################################
 
     # Load the values from keyvault
-    keyVaultName = os.environ["PlaygroundKeysGJ"]
+    keyVaultName = os.environ["PlaygroundKeysGJ"]   
 
     # Set these variables to the names you created for your secrets
     keySecretName = "TranslationpythonKey1"
