@@ -48,7 +48,7 @@ def index_post():
 
     # URI for accessing key vault, watch out, i did not set an evironment variable for the keyvault name!!!!!
     KVUri = f"https://{keyVaultName}.vault.azure.net"
-    return 'geschafft' 
+    
 
     # Instantiate the client and retrieve secrets
     credential = DefaultAzureCredential()
