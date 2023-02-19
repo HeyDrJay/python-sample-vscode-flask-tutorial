@@ -44,8 +44,8 @@ def index_post():
     # Set these variables to the names you created for your secrets
     keySecretName = "TranslationpythonKey1"
     endpointSecretName = "TranslationpythonEndpoint"
+    locationSecretName = "TranslationpythonRegion"  
     
-
     # URI for accessing key vault, watch out, i did not set an evironment variable for the keyvault name!!!!!
     KVUri = f"https://{keyVaultName}.vault.azure.net"
     
@@ -58,7 +58,7 @@ def index_post():
 
     key = kv_client.get_secret(keySecretName).value
     endpoint = kv_client.get_secret(endpointSecretName).value
-    location = "germanywestcentral"
+    location = kv_client.get_secret(locationSecretName).value
 
     # Indicate that we want to translate and the API version (3.0) and the target language
     path = '/translate?api-version=3.0'
@@ -87,7 +87,6 @@ def index_post():
 
     # Call render template, passing the translated text,
     # original text, and target language to the template
-    # GJ repeated the render template once again but thought it was not necessary
     return render_template(
         "output-translate.html",
          translated_text=translated_text,
