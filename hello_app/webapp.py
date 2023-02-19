@@ -56,13 +56,9 @@ def index_post():
 
     print(f"Retrieving your secrets from {keyVaultName}.")
 
-    retrieved_key = kv_client.get_secret(keySecretName).value
-    retrieved_endpoint = kv_client.get_secret(endpointSecretName).value
-
-    print(f"Your secret key value is {retrieved_key}.");
-    print(f"Your secret endpoint value is {retrieved_endpoint}.");
-
-   
+    key = kv_client.get_secret(keySecretName).value
+    endpoint = kv_client.get_secret(endpointSecretName).value
+    location = "germanywestcentral"
 
     # Indicate that we want to translate and the API version (3.0) and the target language
     path = '/translate?api-version=3.0'
