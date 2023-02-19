@@ -17,12 +17,8 @@ from azure.identity import DefaultAzureCredential
 # Time-saver: output a URL to the VS Code terminal so you can easily Ctrl+click to open a browser
 # print('http://127.0.0.1:5000/hello/VSCode')
 ###################################################
-# starting here, we define the translation service#
-###################################################
-@app.route("/input-translate/", methods=['GET'])
-def index():
-    return render_template('input-translate.html')
 
+# The original request is starting at view.py requesting a forms with the get method
 
 @app.route('/input-translate/', methods=['POST'])
 def index_post():

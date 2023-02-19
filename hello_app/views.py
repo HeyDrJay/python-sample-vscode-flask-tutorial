@@ -30,3 +30,8 @@ def hello_there(name = None):
 @app.route("/api/data")
 def get_data():
     return app.send_static_file("data.json")
+
+# needed to repost this here although the post version of it is in the app, otherwise it does not work
+@app.route("/input-translate/", methods=['GET'])
+def index():
+    return render_template('input-translate.html')
