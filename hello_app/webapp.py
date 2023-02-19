@@ -19,7 +19,11 @@ from azure.identity import DefaultAzureCredential
 ###################################################
 
 # The original request is starting at view.py requesting a forms with the get method
+@app.route("/input-translate/", methods=['GET'])
+def index():
+    return render_template('input-translate.html')
 
+# The form is recieved by the post method
 @app.route('/input-translate/', methods=['POST'])
 def index_post():
     # Read the values from the form Watch out: module is requests but statement is request.form#
