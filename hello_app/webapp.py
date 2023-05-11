@@ -5,13 +5,13 @@ from flask import Flask, render_template, redirect, url_for, request, session
 from . import app    # For application discovery by the 'flask' command. 
 from . import views  # For import side-effects of setting up routes. 
 import requests, os, uuid, json
-# if keyvault is used, uncomment the following lines####
-from dotenv import load_dotenv
-load_dotenv()
+# if keyvault is used, uncomment the following lines#
+# from dotenv import load_dotenv
+# load_dotenv()
 # until here############################################
-# from azure.keyvault.secrets import SecretClient
-# from azure.identity import DefaultAzureCredential
-# from azure.core.credentials import AzureKeyCredential
+from azure.keyvault.secrets import SecretClient
+from azure.identity import DefaultAzureCredential
+from azure.core.credentials import AzureKeyCredential
 
 
 # Time-saver: output a URL to the VS Code terminal so you can easily Ctrl+click to open a browser
